@@ -1,0 +1,80 @@
+.portfolio {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 10vh;
+    &__wrapper {
+        display: grid;
+        margin-top: 60px;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(2, 2fr);
+        grid-template-areas: "item-1 item-2""item-3 item-4";
+        justify-content: space-around;
+        column-gap: 5vh;
+        row-gap: 5vw;
+    }
+    &__title {
+        position: relative;
+       text-align: center; 
+       @include before_circle;
+       &:before {
+           top: -6px;
+           left: 50%;
+           transform: translateX(-50%);
+       }
+    }
+    &__subtitle {
+        text-align: center;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        //grid-area: item;
+       /*  grid-template-areas: "img" "ul" "img" "ul"
+                             "img" "ul" "img" "ul"; */
+        
+        /* justify-content: space-around; */
+        a:hover{
+            text-decoration: none;
+        }
+        img {
+            grid-area: img;
+            max-height: 250px;
+            max-width: 250px;
+            //position: absolute;
+            object-fit: cover;
+            //margin-top: 10px;
+            transition: 0.6s;
+            -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+            box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        }
+        :hover {
+            transform: scale(1.05);
+            text-decoration: none;
+        }
+        ul {
+            grid-area: ul;
+            transition: 0.6s;
+            margin-top: 3vh;
+            color: black;
+        }
+        li {
+            transition: 0.6s;
+            margin: 10% 3vw 1vw;
+            margin-top: .5vh;
+            color: black;
+        }
+        /* p {
+            grid-area: p;
+            transition: 0.6s;
+            margin: 50%  3vh 8vh;
+            margin-left: 50%; 
+            margin-top: 3vh;
+            color: black;
+        } */
+        ::before {
+            text-decoration: none;
+        }
+
+    } 
+}

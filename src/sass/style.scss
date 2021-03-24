@@ -1,0 +1,48 @@
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+@import 'base/variables';
+@import 'base/mixins';
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+} 
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 5vh;   
+}
+body {
+    background-color: #f5f5f5;
+}
+
+.divider {
+    border: 3px solid $main-color;
+    line-height: 4px;
+    //width: 60px;
+    margin: 25px auto 0 auto;
+    background-color: $main-color;
+    //animation-name: go-line;
+    //animation-duration: 2s;
+    animation: go-line 2s linear infinite alternate 0s forwards;
+}
+@keyframes go-line{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 60px;
+    }
+}
+@import 'blocks/promo.scss';
+@import 'blocks/title.scss';
+@import 'blocks/button.scss';
+@import 'blocks/sidepanel';
+@import 'blocks/menu';
+@import 'blocks/about';
+@import 'blocks/resume.scss';
+@import 'blocks/knowledge.scss';
+@import 'blocks/portfolio.scss';
+@import 'blocks/media.scss';
